@@ -56,12 +56,15 @@
     
     [celula.nome setText:filme.nome];
     [celula.tipo setText:@"Filme"];
+    [celula.artista setText:filme.artista];
     
     return celula;
 }
 
+
+//Tamanho da Celular
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70;
+    return 90;
 }
 
 
