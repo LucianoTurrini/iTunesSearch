@@ -13,6 +13,7 @@
 
 @interface TableViewController () {
     NSArray *midias;
+    UITextView *TextView;
 }
 
 @end
@@ -22,16 +23,57 @@
 
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    
     
     UINib *nib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
     [self.tableview registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
     
-    iTunesManager *itunes = [iTunesManager sharedInstance];
-    midias = [itunes buscarMidias:@"Apple"];
+    _itunes = [iTunesManager sharedInstance];
+    midias = [_itunes buscarMidias:@"Apple"];
     
-#warning Necessario para que a table view tenha um espaco em relacao ao topo, pois caso contrario o texto ficara atras da barra superior
-    self.tableview.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableview.bounds.size.width, 15.f)];
+    //call HeadTable
+    [self HeadTableSearch];
+    
+    
+
+}
+
+
+- (void)HeadTableSearch {
+    
+    //Header TableView
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableview.bounds.size.width, 80.f)];
+    
+    headerView.backgroundColor=[[UIColor redColor]colorWithAlphaComponent:0.5f];
+    headerView.layer.borderColor=[UIColor blackColor].CGColor;
+    headerView.layer.borderWidth=1.0f;
+    
+    //TextView
+    TextView= [[UITextView alloc] initWithFrame:CGRectMake(15.0f, 35.0f, 150.0f, 25.0f)];
+    TextView.textAlignment = NSTextAlignmentRight;
+    TextView.text = @"";
+    TextView.backgroundColor = [UIColor whiteColor];
+    
+    //Button
+    UIButton *ButtonSearch= [[UIButton alloc] initWithFrame:CGRectMake(180.0f, 35.0f, 80.0f, 25.0f)];
+    [ButtonSearch setTitle: @"Procurar" forState: UIControlStateNormal];
+    [ButtonSearch setTitleColor: [UIColor blackColor] forState:UIControlStateNormal];
+    [ButtonSearch addTarget:self action:@selector(SeachTerm) forControlEvents:UIControlEventTouchUpInside];
+    
+    //Add Head and Replace
+    self.tableview.tableHeaderView = headerView;
+    [_tableview addSubview:TextView];
+    [_tableview addSubview:ButtonSearch];
+    
+}
+
+//Serch Term
+- (void)SeachTerm {
+    
+    midias = [_itunes buscarMidias:TextView.text];
+    
+    [_tableview reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {
