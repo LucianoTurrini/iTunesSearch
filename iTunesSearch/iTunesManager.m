@@ -34,6 +34,9 @@ static bool isFirstAccess = YES;
         termo = @"";
     }
     
+    //Tratamento de erro casse passe uma espaço para URL, todo espaço deve ser trocado por %20 na URL
+    termo = [termo stringByReplacingOccurrencesOfString:@" " withString: @"%20"];
+    
     NSString *url = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=movie", termo];
     NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
     
@@ -62,8 +65,6 @@ static bool isFirstAccess = YES;
     
     return filmes;
 }
-
-
 
 
 #pragma mark - Life Cycle

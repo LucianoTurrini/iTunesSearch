@@ -29,7 +29,7 @@
     [self.tableview registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
     
     _itunes = [iTunesManager sharedInstance];
-    midias = [_itunes buscarMidias:@"Apple"];
+    midias = [_itunes buscarMidias:@"Apple "];
     
     //call HeadTable
     [self HeadTableSearch];
@@ -56,7 +56,7 @@
     
     //Button
     UIButton *ButtonSearch= [[UIButton alloc] initWithFrame:CGRectMake(180.0f, 35.0f, 80.0f, 25.0f)];
-    [ButtonSearch setTitle: @"Procurar" forState: UIControlStateNormal];
+    [ButtonSearch setTitle: NSLocalizedString(@"Botao", nil) forState: UIControlStateNormal];
     [ButtonSearch setTitleColor: [UIColor blackColor] forState:UIControlStateNormal];
     [ButtonSearch addTarget:self action:@selector(SeachTerm) forControlEvents:UIControlEventTouchUpInside];
     
@@ -69,7 +69,7 @@
 
 //Serch Term
 - (void)SeachTerm {
-    
+
     midias = [_itunes buscarMidias:TextView.text];
     
     [_tableview reloadData];
