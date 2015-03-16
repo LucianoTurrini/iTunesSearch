@@ -7,9 +7,11 @@
 //
 
 #import "iTunesManager.h"
-#import "Entidades/Filme.h"
+
 
 @implementation iTunesManager
+
+@synthesize allMidias;
 
 static iTunesManager *SINGLETON = nil;
 
@@ -29,7 +31,15 @@ static bool isFirstAccess = YES;
 }
 
 
-- (NSArray *)buscarMidias:(NSString *)termo {
+- (void)buscarMidias:(NSString *)termo {
+    
+    allMidias = [[NSMutableDictionary alloc] init];
+    
+    Filme *filme = [[Filme alloc] init];
+    Music *music = [[Music alloc] init];
+    Ebook *ebook = [[Ebook alloc] init];
+    Podcast *podcast = [[Podcast alloc] init];
+    
     if (!termo) {
         termo = @"";
     }
@@ -37,7 +47,8 @@ static bool isFirstAccess = YES;
     //Tratamento de erro casse passe uma espaço para URL, todo espaço deve ser trocado por %20 na URL
     termo = [termo stringByReplacingOccurrencesOfString:@" " withString: @"%20"];
     
-    NSString *url = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=movie", termo];
+    //Limite de 120 objetos
+    NSString *url = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=all&limit=120", termo];
     NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
     
     NSError *error;
@@ -46,24 +57,90 @@ static bool isFirstAccess = YES;
                                                                 error:&error];
     if (error) {
         NSLog(@"Não foi possível fazer a busca. ERRO: %@", error);
-        return nil;
+        return ;
     }
     
+    // pegar resultados do  NSDictionary *resultado e inserir no array
     NSArray *resultados = [resultado objectForKey:@"results"];
-    NSMutableArray *filmes = [[NSMutableArray alloc] init];
+    NSMutableArray *Filmes = [[NSMutableArray alloc] init];
+    NSMutableArray *Musicas = [[NSMutableArray alloc] init];
+    NSMutableArray *Ebooks = [[NSMutableArray alloc] init];
+    NSMutableArray *Podcasts = [[NSMutableArray alloc] init];
     
     for (NSDictionary *item in resultados) {
-        Filme *filme = [[Filme alloc] init];
-        [filme setNome:[item objectForKey:@"trackName"]];
-        [filme setTrackId:[item objectForKey:@"trackId"]];
-        [filme setArtista:[item objectForKey:@"artistName"]];
-        [filme setDuracao:[item objectForKey:@"trackTimeMillis"]];
-        [filme setGenero:[item objectForKey:@"primaryGenreName"]];
-        [filme setPais:[item objectForKey:@"country"]];
-        [filmes addObject:filme];
+        
+        if([[item objectForKey:@"kind"] isEqual: @"podcast"]) {
+        [podcast setKey:@"Podcast"];
+        [podcast setNome:[item objectForKey:@"trackName"]];
+        [podcast setTrackId:[item objectForKey:@"trackId"]];
+        [podcast setArtista:[item objectForKey:@"artistName"]];
+        [podcast setDuracao:[item objectForKey:@"trackTimeMillis"]];
+        [podcast setGenero:[item objectForKey:@"primaryGenreName"]];
+        [podcast setPais:[item objectForKey:@"country"]];
+        [podcast setImage:@"podcast.png"];
+        [podcast setImageUrl:[item objectForKey:@"artworkUrl100"]];
+        [Podcasts addObject:podcast];
+        podcast = [[Podcast alloc] init];
+        }
+        else {
+            if([[item objectForKey:@"kind"] isEqual: @"feature-movie"]) {
+                [filme setKey:@"Filme"];
+                [filme setNome:[item objectForKey:@"trackName"]];
+                [filme setTrackId:[item objectForKey:@"trackId"]];
+                [filme setArtista:[item objectForKey:@"artistName"]];
+                [filme setDuracao:[item objectForKey:@"trackTimeMillis"]];
+                [filme setGenero:[item objectForKey:@"primaryGenreName"]];
+                [filme setPais:[item objectForKey:@"country"]];
+                [filme setImage:@"video.jpg"];
+                [filme setImageUrl:[item objectForKey:@"artworkUrl100"]];
+                [Filmes addObject:filme];
+                filme= [[Filme alloc] init];
+             }
+            else {
+                 if ([[item objectForKey:@"kind"] isEqual: @"song"]) {
+                    [music setKey:@"Musica"];
+                    [music setNome:[item objectForKey:@"trackName"]];
+                    [music setTrackId:[item objectForKey:@"trackId"]];
+                    [music setArtista:[item objectForKey:@"artistName"]];
+                    [music setDuracao:[item objectForKey:@"trackTimeMillis"]];
+                    [music setGenero:[item objectForKey:@"primaryGenreName"]];
+                    [music setPais:[item objectForKey:@"country"]];
+                    [music setImage:@"music.png"];
+                    [music setImageUrl:[item objectForKey:@"artworkUrl100"]];
+                    [Musicas addObject:music];
+                     music= [[Music alloc] init];
+                }
+                 else
+                    if ([[item objectForKey:@"kind"] isEqual: @"ebook"]) {
+                        [ebook setKey:@"Ebook"];
+                        [ebook setNome:[item objectForKey:@"trackName"]];
+                        [ebook setTrackId:[item objectForKey:@"trackId"]];
+                        [ebook setArtista:[item objectForKey:@"artistName"]];
+                        [ebook setDuracao:[item objectForKey:@"trackTimeMillis"]];
+                        [ebook setGenero:[item objectForKey:@"primaryGenreName"]];
+                        [ebook setPais:[item objectForKey:@"country"]];
+                        [ebook setImage:@"ebook.png"];
+                        [ebook setImageUrl:[item objectForKey:@"artworkUrl100"]];
+                        [Ebooks addObject:ebook];
+                        ebook= [[Ebook alloc] init];
+                    }
+            }
+        }
+
+        
     }
     
-    return filmes;
+        
+        //if ([Filmes count] != 0)
+        [allMidias setObject:Filmes forKey:@"Filmes"];
+        //if ([Podcasts count] != 0)
+        [allMidias setObject:Podcasts forKey:@"Podcasts"];
+        //if ([Ebooks count] != 0)
+        [allMidias setObject:Ebooks forKey:@"Ebooks"];
+        //if ([Musicas count] != 0)
+        [allMidias setObject:Musicas forKey:@"Musicas"];
+    
+    
 }
 
 

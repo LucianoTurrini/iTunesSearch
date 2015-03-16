@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
+            <connections>
+                <outlet property="artistaLabel" destination="alE-vo-Ta5" id="Ery-Pz-3Cb"/>
+                <outlet property="generoLabel" destination="08j-sb-1Ew" id="zjK-xf-8EE"/>
+                <outlet property="imageProdutoView" destination="pBD-nc-93H" id="ynu-7H-AL4"/>
+                <outlet property="nomeLabel" destination="XRL-rB-eIr" id="5oE-AU-T9P"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Item" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRL-rB-eIr">
+                    <rect key="frame" x="205" y="322" width="190" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="8wM-Vr-OVK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pBD-nc-93H">
+                    <rect key="frame" x="205" y="124" width="190" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="AqB-7e-ZzX"/>
+                        <constraint firstAttribute="width" constant="190" id="g4Q-Fc-Jg7"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alE-vo-Ta5">
+                    <rect key="frame" x="205" y="374" width="190" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="YpP-lb-ptv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero Item" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08j-sb-1Ew">
+                    <rect key="frame" x="205" y="402" width="190" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="t0A-g3-KRW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XRL-rB-eIr" firstAttribute="top" secondItem="pBD-nc-93H" secondAttribute="bottom" constant="8" symbolic="YES" id="FPb-x2-Rr4"/>
+                <constraint firstItem="pBD-nc-93H" firstAttribute="trailing" secondItem="XRL-rB-eIr" secondAttribute="trailing" id="Ge7-RL-Vfc"/>
+                <constraint firstItem="XRL-rB-eIr" firstAttribute="leading" secondItem="alE-vo-Ta5" secondAttribute="leading" id="Kim-Kb-iys"/>
+                <constraint firstItem="pBD-nc-93H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Mhh-cK-MZ5"/>
+                <constraint firstItem="alE-vo-Ta5" firstAttribute="leading" secondItem="08j-sb-1Ew" secondAttribute="leading" id="WMr-sh-Qa7"/>
+                <constraint firstItem="08j-sb-1Ew" firstAttribute="trailing" secondItem="alE-vo-Ta5" secondAttribute="trailing" id="Xf2-BW-mRz"/>
+                <constraint firstItem="alE-vo-Ta5" firstAttribute="trailing" secondItem="XRL-rB-eIr" secondAttribute="trailing" id="aZR-FS-iaz"/>
+                <constraint firstItem="pBD-nc-93H" firstAttribute="leading" secondItem="XRL-rB-eIr" secondAttribute="leading" id="dgs-kY-o3d"/>
+                <constraint firstItem="08j-sb-1Ew" firstAttribute="top" secondItem="alE-vo-Ta5" secondAttribute="bottom" constant="7" id="jUy-op-96b"/>
+                <constraint firstItem="pBD-nc-93H" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="124" id="q7p-H8-9f8"/>
+                <constraint firstItem="alE-vo-Ta5" firstAttribute="top" secondItem="XRL-rB-eIr" secondAttribute="bottom" constant="13" id="rSQ-Lq-Sn4"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

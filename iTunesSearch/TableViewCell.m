@@ -10,6 +10,8 @@
 
 @implementation TableViewCell
 
+@synthesize imageUrl;
+
 - (void)awakeFromNib {
     // Initialization code
 }

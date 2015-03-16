@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2153AE6F1AB5011200F7FC31 /* Ebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 2153AE6E1AB5011200F7FC31 /* Ebook.m */; };
+		2153AE721AB501B000F7FC31 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 2153AE711AB501B000F7FC31 /* Music.m */; };
+		2153AE751AB50E1900F7FC31 /* Podcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2153AE741AB50E1900F7FC31 /* Podcast.m */; };
+		2153AE811AB5F45200F7FC31 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2153AE7F1AB5F45200F7FC31 /* DetailViewController.m */; };
+		2153AE821AB5F45200F7FC31 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2153AE801AB5F45200F7FC31 /* DetailViewController.xib */; };
+		2153AE8A1AB65EBA00F7FC31 /* ImageOptimize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2153AE891AB65EBA00F7FC31 /* ImageOptimize.m */; };
 		216A5A3A1AB08AC20014454A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 216A5A3C1AB08AC20014454A /* Localizable.strings */; };
+		216A5A481AB2298B0014454A /* Midia.m in Sources */ = {isa = PBXBuildFile; fileRef = 216A5A471AB2298B0014454A /* Midia.m */; };
 		92C21CB61AAE757A0052ABE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C21CB51AAE757A0052ABE6 /* main.m */; };
 		92C21CB91AAE757A0052ABE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C21CB81AAE757A0052ABE6 /* AppDelegate.m */; };
 		92C21CBC1AAE757A0052ABE6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C21CBB1AAE757A0052ABE6 /* TableViewController.m */; };
@@ -31,10 +38,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2153AE6D1AB5011200F7FC31 /* Ebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ebook.h; path = Entidades/Ebook.h; sourceTree = "<group>"; };
+		2153AE6E1AB5011200F7FC31 /* Ebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ebook.m; path = Entidades/Ebook.m; sourceTree = "<group>"; };
+		2153AE701AB501B000F7FC31 /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Music.h; path = Entidades/Music.h; sourceTree = "<group>"; };
+		2153AE711AB501B000F7FC31 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Music.m; path = Entidades/Music.m; sourceTree = "<group>"; };
+		2153AE731AB50E1900F7FC31 /* Podcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Podcast.h; path = Entidades/Podcast.h; sourceTree = "<group>"; };
+		2153AE741AB50E1900F7FC31 /* Podcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Podcast.m; path = Entidades/Podcast.m; sourceTree = "<group>"; };
+		2153AE7E1AB5F45200F7FC31 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2153AE7F1AB5F45200F7FC31 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2153AE801AB5F45200F7FC31 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		2153AE881AB65EBA00F7FC31 /* ImageOptimize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageOptimize.h; sourceTree = "<group>"; };
+		2153AE891AB65EBA00F7FC31 /* ImageOptimize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageOptimize.m; sourceTree = "<group>"; };
 		216A5A3B1AB08AC20014454A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		216A5A3D1AB08AC70014454A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		216A5A3E1AB08AF90014454A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		216A5A3F1AB08B030014454A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		216A5A461AB2298B0014454A /* Midia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Midia.h; path = Entidades/Midia.h; sourceTree = "<group>"; };
+		216A5A471AB2298B0014454A /* Midia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Midia.m; path = Entidades/Midia.m; sourceTree = "<group>"; };
 		92C21CB01AAE757A0052ABE6 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C21CB41AAE757A0052ABE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92C21CB51AAE757A0052ABE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,9 +122,14 @@
 				92C21CB81AAE757A0052ABE6 /* AppDelegate.m */,
 				92C21CBA1AAE757A0052ABE6 /* TableViewController.h */,
 				92C21CBB1AAE757A0052ABE6 /* TableViewController.m */,
+				2153AE881AB65EBA00F7FC31 /* ImageOptimize.h */,
+				2153AE891AB65EBA00F7FC31 /* ImageOptimize.m */,
 				92C21CDC1AAE75DC0052ABE6 /* TableView.xib */,
 				92C21CD91AAE75B30052ABE6 /* iTunesManager.h */,
 				92C21CDA1AAE75B30052ABE6 /* iTunesManager.m */,
+				2153AE7E1AB5F45200F7FC31 /* DetailViewController.h */,
+				2153AE7F1AB5F45200F7FC31 /* DetailViewController.m */,
+				2153AE801AB5F45200F7FC31 /* DetailViewController.xib */,
 				92C21CC01AAE757A0052ABE6 /* Images.xcassets */,
 				92C21CB31AAE757A0052ABE6 /* Supporting Files */,
 			);
@@ -152,6 +177,14 @@
 			children = (
 				92C21CE61AAE858E0052ABE6 /* Filme.h */,
 				92C21CE71AAE858E0052ABE6 /* Filme.m */,
+				216A5A461AB2298B0014454A /* Midia.h */,
+				216A5A471AB2298B0014454A /* Midia.m */,
+				2153AE6D1AB5011200F7FC31 /* Ebook.h */,
+				2153AE6E1AB5011200F7FC31 /* Ebook.m */,
+				2153AE701AB501B000F7FC31 /* Music.h */,
+				2153AE711AB501B000F7FC31 /* Music.m */,
+				2153AE731AB50E1900F7FC31 /* Podcast.h */,
+				2153AE741AB50E1900F7FC31 /* Podcast.m */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -240,6 +273,7 @@
 			files = (
 				92C21CC11AAE757A0052ABE6 /* Images.xcassets in Resources */,
 				216A5A3A1AB08AC20014454A /* Localizable.strings in Resources */,
+				2153AE821AB5F45200F7FC31 /* DetailViewController.xib in Resources */,
 				92C21CE21AAE76930052ABE6 /* TableViewCell.xib in Resources */,
 				92C21CDD1AAE75DC0052ABE6 /* TableView.xib in Resources */,
 			);
@@ -259,9 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2153AE751AB50E1900F7FC31 /* Podcast.m in Sources */,
+				2153AE721AB501B000F7FC31 /* Music.m in Sources */,
 				92C21CBC1AAE757A0052ABE6 /* TableViewController.m in Sources */,
 				92C21CDB1AAE75B30052ABE6 /* iTunesManager.m in Sources */,
+				2153AE6F1AB5011200F7FC31 /* Ebook.m in Sources */,
+				216A5A481AB2298B0014454A /* Midia.m in Sources */,
+				2153AE8A1AB65EBA00F7FC31 /* ImageOptimize.m in Sources */,
 				92C21CB91AAE757A0052ABE6 /* AppDelegate.m in Sources */,
+				2153AE811AB5F45200F7FC31 /* DetailViewController.m in Sources */,
 				92C21CE81AAE858E0052ABE6 /* Filme.m in Sources */,
 				92C21CE11AAE76930052ABE6 /* TableViewCell.m in Sources */,
 				92C21CB61AAE757A0052ABE6 /* main.m in Sources */,
@@ -335,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -371,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

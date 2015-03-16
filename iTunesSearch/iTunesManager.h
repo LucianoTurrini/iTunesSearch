@@ -7,8 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entidades/Filme.h"
+#import "Entidades/Music.h"
+#import "Entidades/Ebook.h"
+#import "Entidades/Podcast.h"
 
 @interface iTunesManager : NSObject
+{
+    NSMutableDictionary *allMidias;
+}
+
+@property (nonatomic, strong) NSMutableDictionary *allMidias;
 
 /**
  * gets singleton object.
@@ -16,6 +25,6 @@
  */
 + (iTunesManager*)sharedInstance;
 
-- (NSArray *)buscarMidias:(NSString *)termo;
+- (void)buscarMidias:(NSString *)termo;
 
 @end

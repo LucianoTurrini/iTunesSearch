@@ -15,4 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *artista;
 
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageUrl;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+
 @end

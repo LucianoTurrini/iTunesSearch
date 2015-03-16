@@ -23,12 +23,16 @@
 #warning Necessário para inicializar a aplicacao sem storyboard
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-
-#warning Adicionado codigo para iniciar com a interface do TableView
-//    TableViewController *tvc = [[TableViewController alloc] initWithNibName:@"TableView" bundle:nil];
+ 
     TableViewController *tvc = [[TableViewController alloc] init];
-    [self.window setRootViewController:tvc];
+    
+    //Instance of a UINavigationController
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tvc];
+    
+    //place navigation Controller's view in the window hierarchy
+    [[self window] setRootViewController:navController];
+    
+    self.window.backgroundColor = [UIColor redColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

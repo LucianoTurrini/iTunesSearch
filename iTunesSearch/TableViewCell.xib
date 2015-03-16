@@ -14,40 +14,70 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nome da Mídia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIA-JU-luV">
-                        <rect key="frame" x="8" y="8" width="284" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Mídia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIA-JU-luV">
+                        <rect key="frame" x="103" y="9" width="156" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="R8p-Fn-Hq3"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tipo da Mídia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-yj-wnl">
-                        <rect key="frame" x="8" y="36" width="284" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo da Mídia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-yj-wnl">
+                        <rect key="frame" x="103" y="37" width="156" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="lvM-AC-lVY"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.89928382640000004" green="0.12798005339999999" blue="0.001599563868" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMw-7Q-LnV">
-                        <rect key="frame" x="8" y="65" width="287" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMw-7Q-LnV">
+                        <rect key="frame" x="103" y="66" width="156" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lXI-iU-P33">
+                        <rect key="frame" x="8" y="6" width="85" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="Deh-Hi-4gM"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="inc-Zp-Swp">
+                        <rect key="frame" x="245" y="6" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="MKX-9B-9jg"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="6Z5-yj-wnl" secondAttribute="trailing" id="20H-3b-RZ8"/>
-                    <constraint firstItem="6Z5-yj-wnl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="96O-aR-ps1"/>
-                    <constraint firstItem="UIA-JU-luV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Q1V-YW-Wh5"/>
-                    <constraint firstItem="UIA-JU-luV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YdC-rX-aV6"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="UIA-JU-luV" secondAttribute="trailing" id="cTH-Nq-14q"/>
-                    <constraint firstItem="6Z5-yj-wnl" firstAttribute="top" secondItem="UIA-JU-luV" secondAttribute="bottom" constant="5" id="tJH-0d-wda"/>
+                    <constraint firstItem="inc-Zp-Swp" firstAttribute="top" secondItem="lXI-iU-P33" secondAttribute="top" id="2Jn-Ia-uEY"/>
+                    <constraint firstItem="6Z5-yj-wnl" firstAttribute="top" secondItem="UIA-JU-luV" secondAttribute="bottom" constant="7" id="7MN-C4-2yd"/>
+                    <constraint firstItem="6Z5-yj-wnl" firstAttribute="trailing" secondItem="UIA-JU-luV" secondAttribute="trailing" id="7hk-4M-eOO"/>
+                    <constraint firstItem="6Z5-yj-wnl" firstAttribute="trailing" secondItem="OMw-7Q-LnV" secondAttribute="trailing" id="9nJ-H0-JHr"/>
+                    <constraint firstItem="lXI-iU-P33" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Aar-oX-ORQ"/>
+                    <constraint firstItem="UIA-JU-luV" firstAttribute="leading" secondItem="lXI-iU-P33" secondAttribute="trailing" constant="10" id="Hrt-j3-wTF"/>
+                    <constraint firstItem="6Z5-yj-wnl" firstAttribute="leading" secondItem="OMw-7Q-LnV" secondAttribute="leading" id="PUw-us-2pI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UIA-JU-luV" secondAttribute="trailing" constant="36" id="Utz-NR-GFt"/>
+                    <constraint firstItem="lXI-iU-P33" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="bjz-GV-DXf"/>
+                    <constraint firstItem="inc-Zp-Swp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gIy-Dn-74y"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="OMw-7Q-LnV" secondAttribute="bottom" constant="2.5" id="hNZ-aU-eiD"/>
+                    <constraint firstItem="OMw-7Q-LnV" firstAttribute="top" secondItem="inc-Zp-Swp" secondAttribute="bottom" constant="10" id="hjV-0D-fiO"/>
+                    <constraint firstItem="6Z5-yj-wnl" firstAttribute="leading" secondItem="UIA-JU-luV" secondAttribute="leading" id="imZ-hd-h5n"/>
+                    <constraint firstItem="UIA-JU-luV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="jwu-jo-kR4"/>
+                    <constraint firstItem="lXI-iU-P33" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kaO-ip-Kbh"/>
+                    <constraint firstItem="OMw-7Q-LnV" firstAttribute="top" secondItem="6Z5-yj-wnl" secondAttribute="bottom" constant="8" symbolic="YES" id="l8G-ki-qrD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="artista" destination="OMw-7Q-LnV" id="BY8-z9-hZR"/>
+                <outlet property="image" destination="inc-Zp-Swp" id="5D1-8Z-0hv"/>
+                <outlet property="imageUrl" destination="lXI-iU-P33" id="UlG-oD-qWv"/>
                 <outlet property="nome" destination="UIA-JU-luV" id="ubX-WX-gam"/>
                 <outlet property="tipo" destination="6Z5-yj-wnl" id="vYj-HE-tLd"/>
             </connections>
-            <point key="canvasLocation" x="578.5" y="97"/>
+            <point key="canvasLocation" x="92.5" y="183"/>
         </tableViewCell>
     </objects>
 </document>
