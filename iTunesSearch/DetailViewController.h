@@ -21,8 +21,4 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *generoLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *duracaoLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *precoLabel;
-
 @end
